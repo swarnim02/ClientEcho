@@ -23,44 +23,29 @@
   font-size: 1.1rem;
 }
 
-.customer-controls {
-  display: flex;
-  gap: 1rem;
+.add-customer-section {
   margin-bottom: 2rem;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.search-box input {
-  padding: 0.75rem 1rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
-  width: 300px;
-  font-size: 1rem;
-}
-
-.sort-box select {
-  padding: 0.75rem 1rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
-  font-size: 1rem;
-  background-color: white;
+  text-align: center;
 }
 
 .add-customer-btn {
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 2rem;
   background-color: #2563eb;
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: 600;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+  min-width: 200px;
 }
 
 .add-customer-btn:hover {
   background-color: #1d4ed8;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(37, 99, 235, 0.3);
 }
 
 .add-customer-form {
@@ -69,11 +54,15 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .add-customer-form h2 {
   color: #1e293b;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .form-group {
@@ -110,11 +99,41 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 1rem;
 }
 
 .submit-btn:hover {
   background-color: #1d4ed8;
   transform: translateY(-1px);
+}
+
+.customer-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  width: 300px;
+  font-size: 1rem;
+}
+
+.sort-box select {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: white;
 }
 
 .customer-list {
@@ -198,5 +217,9 @@
 
   .customer-list {
     grid-template-columns: 1fr;
+  }
+
+  .add-customer-form {
+    padding: 1rem;
   }
 } 

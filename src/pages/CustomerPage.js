@@ -84,26 +84,12 @@ function CustomerPage() {
         <p>Manage and view customer information</p>
       </header>
 
-      <div className="customer-controls">
-        <div className="search-box">
-          <input
-            type="text"
-            placeholder="Search customers..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-        </div>
-        <div className="sort-box">
-          <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
-            <option value="name">Sort by Name</option>
-            <option value="date">Sort by Join Date</option>
-          </select>
-        </div>
+      <div className="add-customer-section">
         <button 
           className="add-customer-btn"
           onClick={() => setShowAddForm(!showAddForm)}
         >
-          {showAddForm ? 'Cancel' : 'Add New Customer'}
+          {showAddForm ? 'Cancel' : '+ Add New Customer'}
         </button>
       </div>
 
@@ -169,6 +155,23 @@ function CustomerPage() {
           </form>
         </div>
       )}
+
+      <div className="customer-controls">
+        <div className="search-box">
+          <input
+            type="text"
+            placeholder="Search customers..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
+        <div className="sort-box">
+          <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+            <option value="name">Sort by Name</option>
+            <option value="date">Sort by Join Date</option>
+          </select>
+        </div>
+      </div>
 
       <div className="customer-list">
         {filteredCustomers.length === 0 ? (
